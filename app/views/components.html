@@ -1,0 +1,34 @@
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Components
+{% endblock %}
+
+{% block beforeContent %}
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/">Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link">Components</a>
+      </li>
+    </ol>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row flex mb-3">
+    <div class="govuk-grid-column-one-third">
+      <aside class="app-subnav" role="complementary">
+        {% include "includes/nav_components.html" %}
+      </aside>
+    </div>
+
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Components</h1>
+      <p>Components are ready-made interface elements that can be used in different patterns and layouts. They are part of our visual language and are intended to be used unchanged for a consistent user experience.</p>
+      <p>These components extend those used across Government in the <a href="https://design-system.service.gov.uk/components/">GOV.UK design system</a>. As our components mature, we will look to contribute them to the GOV.UK system so they can be used more widely.</p>
+    </div>
+  </div>
+{% endblock %}
