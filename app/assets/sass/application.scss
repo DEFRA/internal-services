@@ -88,5 +88,77 @@ $govuk-assets-path: '/govuk/assets/';
   }
 }
 
+
 // Defra Components
 @import "components/pagination";
+@import "components/button-as-link";
+
+
+// Science Search
+@media (min-width: 40.0625em) {
+  .app-mobile-filters-link {
+    display: none
+  }
+}
+
+.filters-modal {
+  background: #fff;
+  bottom: 0;
+  // display: none;
+  height: 100%;
+  left: 0;
+  margin: 0;
+  overflow-y: auto;
+  padding: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+
+  &__header {
+    display: grid;
+    grid-auto-flow: column;
+    padding: 15px 0 10px;
+    border-bottom: 1px solid #b1b4b6;
+    margin: 0 15px 0 15px;
+  }
+
+  &__content {
+    padding: 10px 15px 90px 15px;
+  }
+
+  &__footer {
+    display: block;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    padding: 15px;
+    border-top: 1px solid #b1b4b6;
+    box-shadow: 0px 0 5px rgba(177,180,182,0.8);
+
+    button {
+      margin-bottom: 0;
+    }
+  }
+
+  &__heading {
+    margin: 0;
+  }
+
+  &__return-link {
+    justify-self: end;
+    align-self: center;
+    font-weight: 400;
+    margin: 0;
+  }
+
+  &__clear-filters {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: 400;
+  }
+}

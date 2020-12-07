@@ -1,0 +1,94 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Start page example
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/">Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/pages">Pages</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link">Science Search</a>
+      </li>
+    </ol>
+  </div>
+{% endblock %}
+
+{% block content %}
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const filtersModal = document.querySelector('.filters-modal')
+    const showFiltersModal = document.querySelector('.js-show-modal')
+    const hideFiltersModal = document.querySelector('.js-hide-modal')
+
+    showFiltersModal.addEventListener('click', (event) => {
+      event.preventDefault()
+      filtersModal.toggleAttribute('hidden')
+    })
+
+    hideFiltersModal.addEventListener('click', (event) => {
+      event.preventDefault()
+      filtersModal.toggleAttribute('hidden')
+    })
+  })
+</script>
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Science Search</h1>
+      </div>
+    </div>
+
+    <div class="govuk-grid-row">
+
+      <div class="govuk-grid-column-one-third">
+        <div class="govuk-form-group">
+          <button class="button-as-link app-mobile-filters-link js-show-modal">
+            Filter <span class="govuk-visually-hidden"> results</span>
+          </button>
+        </div>
+
+        <div class="filters-modal" aria-modal="true" tabindex="0" hidden="true">
+          <div class="filters-modal__header">
+            <h1 class="filters-modal__heading govuk-heading-xl">Filter</h1>
+            <button class="button-as-link filters-modal__return-link js-hide-modal" type="button"> <!-- Should close the filters modal -->
+              Return to results
+            </button>
+          </div>
+
+          <div class="filters-modal__content">
+            filters here
+          </div>
+
+          <div class="filters-modal__footer">
+            <button class="govuk-button" type="button">
+              Show <span class="js-result-count"> 104,866 results</span> <!-- Should close the filters modal -->
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-l">Results</h2>
+        Results here
+      </div>
+
+    </div>
+  </main>
+</div>
+{% endblock %}

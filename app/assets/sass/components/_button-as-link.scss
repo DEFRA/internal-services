@@ -1,0 +1,30 @@
+.button-as-link {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-appearance: none;
+  -webkit-font-smoothing: antialiased;
+  background: none;
+  border-width: 0;
+  color: #1d70b8;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "nta", arial, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding: 0;
+  text-decoration: none;
+  line-height: 1.5;
+
+  &:hover {
+    color: #003078;
+  }
+
+  &:focus {
+    background-color: #fd0;
+    box-shadow: 0 -2px #fd0,0 4px #0b0c0c;
+    color: #0b0c0c;
+    outline-offset: 0;
+    outline: 3px solid transparent;
+    text-decoration: none;
+  }
+}
