@@ -1,0 +1,33 @@
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Page Templates
+{% endblock %}
+
+{% block beforeContent %}
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/">Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link">Page Templates</a>
+      </li>
+    </ol>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row flex mb-3">
+    <div class="govuk-grid-column-one-third">
+      <aside class="app-subnav" role="complementary">
+        {% include "includes/nav_components.html" %}
+      </aside>
+    </div>
+
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Page Templates</h1>
+      <p>Internal services or admin products should use these page templates.</p>
+    </div>
+  </div>
+{% endblock %}

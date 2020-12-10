@@ -1,0 +1,96 @@
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Maintain Lookups
+{% endblock %}
+
+{% block beforeContent %}
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/">Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/">Dev IDD</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link">Maintain Lookups</a>
+      </li>
+    </ol>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <div class="app-pane__nav">
+    <nav class="app-navigation govuk-clearfix" aria-labelledby="mainmenulabel">
+      <h2 id="mainmenulabel" class="govuk-visually-hidden">Main Menu</h2>
+
+      <ul class="app-navigation__list">
+        <li class="current-page">
+          <a class="govuk-link" href="#">Home</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Contact Us</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Jobs</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">News</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Site A to Z</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="govuk-grid-row flex mb-3">
+    <div class="govuk-grid-column-one-third">
+      <aside class="app-subnav" role="complementary">
+        {% include "includes/app_sidebar-nav.html" %}
+      </aside>
+    </div>
+
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-m">Maintain Lookups</h1>
+
+      <hr>
+
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header govuk-!-width-three-quarters">Description</th>
+            <th scope="col" class="govuk-table__header">Valid</th>
+            <th scope="col" class="govuk-table__header">Edit</th>
+            <th scope="col" class="govuk-table__header">Delete</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Chestnuts</th>
+            <td class="govuk-table__cell">✔</td>
+            <td class="govuk-table__cell">✎</td>
+            <td class="govuk-table__cell">ⅹ</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Citrus Fruit plus Kumquat</th>
+            <td class="govuk-table__cell">✔</td>
+            <td class="govuk-table__cell">✎</td>
+            <td class="govuk-table__cell">ⅹ</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Egg products</th>
+            <td class="govuk-table__cell">✔</td>
+            <td class="govuk-table__cell">✎</td>
+            <td class="govuk-table__cell">ⅹ</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><small>Page last updated: 10 December 2020</small></p>
+
+      {% include "includes/components/pagination.html" %}
+    </div>
+  </div>
+{% endblock %}

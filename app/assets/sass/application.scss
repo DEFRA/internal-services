@@ -17,6 +17,9 @@ $govuk-assets-path: '/govuk/assets/';
 // Components that aren't in Frontend
 @import "components/cookie-banner";
 
+// Templates that aren't in Frontend
+@import "templates/app";
+
 // Internatl Services specific
 :root {
   --primary: #00a33b;
