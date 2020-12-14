@@ -95,7 +95,7 @@ $govuk-assets-path: '/govuk/assets/';
 // Defra Components
 @import "components/pagination";
 @import "components/button-as-link";
-
+@import "components/modal";
 
 // Science Search
 @media (min-width: 40.0625em) {

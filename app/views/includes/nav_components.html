@@ -3,8 +3,11 @@
     <h2 id="sidemenulabel" class="app-subnav__heading">Side Menu</h2>
 
     <ul class="app-subnav__section govuk-list govuk-!-font-size-16">
-      <li{% if activesub == "pagination" %} class="app-subnav__section-item app-subnav__section-item--current"{% endif %}>
+      <li class="app-subnav__section-item{% if page == 'pagination' %} app-subnav__section-item--current{% endif %}">
         <a class="app-subnav__link govuk-link" href="/components/pagination">Pagination</a>
+      </li>
+      <li class="app-subnav__section-item{% if page == 'modal' %} app-subnav__section-item--current{% endif %}">
+        <a class="app-subnav__link govuk-link" href="/components/modal">Modal</a>
       </li>
     </ul>
   </nav>

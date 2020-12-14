@@ -3,11 +3,25 @@
     <h2 id="sidemenulabel" class="app-subnav__heading">Side Menu</h2>
 
     <ul class="app-subnav__section govuk-list govuk-!-font-size-16">
-      <li{% if activesub == "templates" %} class="app-subnav__section-item app-subnav__section-item--current"{% endif %}>
+      <li class="app-subnav__section-item{% if page == 'templates' %} app-subnav__section-item--current{% endif %}">
         <a class="app-subnav__link govuk-link" href="/templates">Page Templates</a>
+        {% if page == 'templates' %}
+        <ul class="govuk-list govuk-!-font-size-16">
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link" href="/templates/app">Dashboard</a>
+          </li>
+        </ul>
+        {% endif %}
       </li>
-      <li{% if activesub == "components" %} class="app-subnav__section-item app-subnav__section-item--current"{% endif %}>
+      <li class="app-subnav__section-item{% if page == 'components' %} app-subnav__section-item--current{% endif %}">
         <a class="app-subnav__link govuk-link" href="/components">Components</a>
+        {% if page == 'components' %}
+        <ul class="govuk-list govuk-!-font-size-16">
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link" href="/components/pagination">Pagination</a>
+          </li>
+        </ul>
+        {% endif %}
       </li>
     </ul>
   </nav>

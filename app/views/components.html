@@ -4,6 +4,8 @@
   Components
 {% endblock %}
 
+{% set page = "components" %}
+
 {% block beforeContent %}
   <div class="govuk-breadcrumbs">
     <ol class="govuk-breadcrumbs__list">
@@ -21,7 +23,7 @@
   <div class="govuk-grid-row flex mb-3">
     <div class="govuk-grid-column-one-third">
       <aside class="app-subnav" role="complementary">
-        {% include "includes/nav_components.html" %}
+        {% include "includes/nav_pages.html" %}
       </aside>
     </div>
 

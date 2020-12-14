@@ -1,0 +1,38 @@
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.querySelector('.modal')
+    const showModal = document.querySelector('.js-show-modal')
+    const hideModal = document.querySelector('.js-hide-modal')
+
+    showModal.addEventListener('click', (event) => {
+      event.preventDefault()
+      modal.toggleAttribute('hidden')
+    })
+
+    hideModal.addEventListener('click', (event) => {
+      event.preventDefault()
+      modal.toggleAttribute('hidden')
+    })
+  })
+</script>
+
+<button class="button-as-link js-show-modal">Open Modal</button>
+
+<div class="modal" aria-modal="true" tabindex="0" hidden="true">
+  <div class="modal__header">
+    <h1 class="modal__heading govuk-heading-xl">Filter</h1>
+    <button class="button-as-link js-hide-modal">
+      Close <span class="govuk-visually-hidden">Modal</span>
+    </button>
+  </div>
+
+  <div class="modal__content">
+    Modal content here
+  </div>
+
+  <div class="modal__footer">
+    <button class="govuk-button">
+      Example CTA
+    </button>
+  </div>
+</div>
