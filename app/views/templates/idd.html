@@ -1,0 +1,43 @@
+{% extends "layout_idd.html" %}
+
+{% block pageTitle %}
+  IDD
+{% endblock %}
+
+{% set page = "idd" %}
+{% set mainClasses = mainClasses | default("") %}
+
+{% block content %}
+  <div class="dashboard-container">
+    <aside class="dashboard-menu" role="complementary">
+      <nav aria-labelledby="sidemenulabel">
+        <h2 id="sidemenulabel" class="dashboard-menu__heading">Side Menu</h2>
+
+        <ul class="dashboard-menu__section govuk-list govuk-!-font-size-16">
+          <li class="dashboard-menu__section-item">
+            <a class="dashboard-menu__link govuk-link" href="/idd">Welcome Page</a>
+          </li>
+        </ul>
+
+        <ul class="dashboard-menu__section govuk-list govuk-!-font-size-16">
+          <li class="dashboard-menu__section-item">
+            <a class="dashboard-menu__link govuk-link" href="#">System Maintenance</a>
+          </li>
+          <li class="dashboard-menu__section-item">
+            <a class="dashboard-menu__link govuk-link" href="#">Maintain Lookups</a>
+          </li>
+          <li class="dashboard-menu__section-item dashboard-menu__section-item--current">
+            <a class="dashboard-menu__link  govuk-link" href="#">Maintain Rules</a>
+          </li>
+          <li class="dashboard-menu__section-item">
+            <a class="dashboard-menu__link govuk-link" href="#">SSO Admin</a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <div class="main">
+      <h1 class="govuk-heading-m">Main</h1>
+    </div>
+  </div>
+{% endblock %}
