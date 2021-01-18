@@ -8,3 +8,19 @@ if (window.console && window.console.info) {
 $(document).ready(function () {
   window.GOVUKFrontend.initAll()
 })
+
+document.addEventListener('DOMContentLoaded', () => {
+  const sidebar = document.querySelector('.dashboard-menu')
+  const toggleSidebar = document.querySelector('.toggle-sidebar')
+  const toggledSidebar = localStorage.getItem('toggledSidebar')
+
+  if (toggledSidebar == 'true') {
+    toggleSidebar.classList.add('dashboard-menu--collapsed')
+  }
+
+  toggleSidebar.addEventListener('click', (event) => {
+    event.preventDefault()
+    sidebar.classList.toggle('dashboard-menu--collapsed')
+    localStorage.setItem('toggledSidebar', 'true')
+  })
+})

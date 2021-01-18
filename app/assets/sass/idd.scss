@@ -146,6 +146,38 @@ $govuk-canvas-background-colour: $govuk-body-background-colour;
       margin-right: 0;
     }
   }
+
+  .toggle-sidebar {
+    background-color: transparent;
+    border: none;
+    bottom: 10px;
+    padding: 0;
+    position: absolute;
+    right: -16px;
+  }
+
+  &--collapsed {
+    width: 48px;
+
+    .dashboard-menu__secondary {
+      padding-left: 0;
+    }
+
+    .dashboard-menu__link {
+      justify-content: center;
+      padding: 8px 0;
+    }
+
+    .dashboard-menu__text,
+    .dashboard-menu__heading,
+    .icon--external {
+      display: none;
+    }
+
+    .toggle-sidebar {
+      transform: rotate(180deg);
+    }
+  }
 }
 
 .main {
