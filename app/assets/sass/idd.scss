@@ -22,6 +22,7 @@ $govuk-canvas-background-colour: $govuk-body-background-colour;
   --mid-gray: #323F4B;
   --dark-gray: #1F2933;
   --white: #fff;
+  --blue: #127FBF;
 
   // values
   --header-height: 74px;
@@ -93,7 +94,8 @@ $govuk-canvas-background-colour: $govuk-body-background-colour;
   width: var(--sidebar-width);
 
   &__heading {
-    @include govuk-visually-hidden;
+    color: var(--white);
+    margin-left: 12px;
   }
 
   .govuk-link {
@@ -108,24 +110,41 @@ $govuk-canvas-background-colour: $govuk-body-background-colour;
     }
   }
 
+  &__secondary {
+    padding-left: 20px;
+  }
+
   &__section-item {
     border-left: 3px solid transparent;
 
     &:hover {
-      border-left-color: var(--primary);
+      border-left-color: var(--blue);
+      background-color: var(--dark-gray);
     }
 
-    &--current {
-      border-left-color: var(--primary);
+    &--active {
+      border-left-color: var(--blue);
+      border-width: 6px;
+      background-color: var(--dark-gray);
       font-weight: bold;
     }
   }
 
   &__link {
-    display: block;
+    align-items: center;
+    display: flex;
     padding: 8px 30px 8px 10px;
     text-decoration: none;
     border-left: 3px solid transparent;
+  }
+
+  .icon {
+    margin-right: 6px;
+
+    &--external {
+      margin-left: 6px;
+      margin-right: 0;
+    }
   }
 }
 
