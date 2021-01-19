@@ -67,9 +67,9 @@ $govuk-canvas-background-colour: $govuk-body-background-colour;
   }
 }
 .govuk-width-container {
-  max-width: 1920px;
   margin-left: 0;
   margin-right: 30px;
+  max-width: 1920px;
 }
 
 .govuk-main-wrapper {
@@ -118,24 +118,24 @@ $govuk-canvas-background-colour: $govuk-body-background-colour;
     border-left: 3px solid transparent;
 
     &:hover {
-      border-left-color: var(--blue);
       background-color: var(--dark-gray);
+      border-left-color: var(--blue);
     }
 
     &--active {
+      background-color: var(--dark-gray);
       border-left-color: var(--blue);
       border-width: 6px;
-      background-color: var(--dark-gray);
       font-weight: bold;
     }
   }
 
   &__link {
     align-items: center;
+    border-left: 3px solid transparent;
     display: flex;
     padding: 8px 30px 8px 10px;
     text-decoration: none;
-    border-left: 3px solid transparent;
   }
 
   .icon {
@@ -151,9 +151,11 @@ $govuk-canvas-background-colour: $govuk-body-background-colour;
     background-color: transparent;
     border: none;
     bottom: 10px;
+    height: 32px;
     padding: 0;
     position: absolute;
     right: -16px;
+    width: 32px;
   }
 
   &--collapsed {

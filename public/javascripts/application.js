@@ -15,12 +15,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const toggledSidebar = localStorage.getItem('toggledSidebar')
 
   if (toggledSidebar == 'true') {
-    toggleSidebar.classList.add('dashboard-menu--collapsed')
+    sidebar.classList.add('dashboard-menu--collapsed')
   }
 
   toggleSidebar.addEventListener('click', (event) => {
     event.preventDefault()
     sidebar.classList.toggle('dashboard-menu--collapsed')
-    localStorage.setItem('toggledSidebar', 'true')
+    // localStorage.setItem('toggledSidebar', 'true')
+    if (toggledSidebar === 'true') {
+      localStorage.setItem('toggledSidebar', 'false')
+    } else {
+      localStorage.setItem('toggledSidebar', 'true')
+    }
   })
 })
