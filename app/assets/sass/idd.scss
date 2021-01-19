@@ -1,0 +1,212 @@
+// The unbranded stylesheet is used if you need to create pages in your
+// prototype without the GOV.UK branding.
+//
+// See localhost:3000/docs/templates/blank-unbranded
+
+// Import settings first so we can override them before importing all of GOV.UK Frontend
+// If you need to enable compatibility mode or the legacy palette, do that *before* this import.
+@import "node_modules/govuk-frontend/govuk/settings/all";
+
+// Override the default GOV.UK Frontend font stack
+$govuk-font-family: "HelveticaNeue", "Helvetica Neue", "Arial", "Helvetica", sans-serif;
+
+// Override the canvas background colour, which is normally grey to blend with the GOV.UK footer.
+$govuk-canvas-background-colour: $govuk-body-background-colour;
+
+@import "application";
+
+:root {
+  // colours
+  --gray: #3E4C59;
+  --light-gray: #E4E7EB;
+  --mid-gray: #323F4B;
+  --dark-gray: #1F2933;
+  --white: #fff;
+  --blue: #127FBF;
+
+  // values
+  --header-height: 74px;
+  --sidebar-width: 266px;
+}
+
+.govuk-template__body {
+  background-color: var(--light-gray);
+}
+
+.govuk-header {
+  background: var(--gray);
+  border-bottom: none;
+  height: var(--header-height);
+
+  &__container {
+    padding-top: 0;
+    max-width: 100%;
+  }
+
+  &__content {
+    align-items: center;
+    display: flex;
+    float: none;
+    justify-content: space-between;
+    padding-left: 36px;
+    width: 100%;
+  }
+
+  &__link {
+    margin-bottom: 0;
+  }
+
+  &__logo {
+    align-items: center;
+    background-color: var(--mid-gray);
+    display: flex;
+    height: var(--header-height);
+    justify-content: center;
+    margin-bottom: 0;
+    padding: 10px;
+    width: var(--sidebar-width);
+  }
+
+  .header-logo {
+    margin-right: 0;
+  }
+}
+.govuk-width-container {
+  margin-left: 0;
+  margin-right: 30px;
+  max-width: 1920px;
+}
+
+.govuk-main-wrapper {
+  height: calc(100vh - var(--header-height));
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
+.dashboard-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.dashboard-menu {
+  align-self: flex-start;
+  background-color: var(--gray);
+  display: block;
+  flex: 0 0 auto;
+  height: calc(100vh - var(--header-height));
+  position: sticky;
+  top: 4px;
+  width: var(--sidebar-width);
+
+  &__heading {
+    color: var(--white);
+    margin-left: 12px;
+  }
+
+  .govuk-link {
+    color: var(--white);
+  }
+
+  &__section {
+    margin-top: 0;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__secondary {
+    padding-left: 20px;
+  }
+
+  &__section-item {
+    border-left: 3px solid transparent;
+
+    &:hover {
+      background-color: var(--dark-gray);
+      border-left-color: var(--blue);
+    }
+
+    &--active {
+      background-color: var(--dark-gray);
+      border-left-color: var(--blue);
+      border-width: 6px;
+      font-weight: bold;
+    }
+  }
+
+  &__link {
+    align-items: center;
+    border-left: 3px solid transparent;
+    display: flex;
+    padding: 8px 30px 8px 10px;
+    text-decoration: none;
+  }
+
+  .icon {
+    margin-right: 6px;
+
+    &--external {
+      margin-left: 6px;
+      margin-right: 0;
+    }
+  }
+
+  .toggle-sidebar {
+    background-color: transparent;
+    border: none;
+    bottom: 10px;
+    height: 32px;
+    padding: 0;
+    position: absolute;
+    right: -16px;
+    width: 32px;
+  }
+
+  &--collapsed {
+    width: 48px;
+
+    .dashboard-menu__secondary {
+      padding-left: 0;
+    }
+
+    .dashboard-menu__link {
+      justify-content: center;
+      padding: 8px 0;
+    }
+
+    .dashboard-menu__text,
+    .dashboard-menu__heading,
+    .icon--external {
+      display: none;
+    }
+
+    .toggle-sidebar {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.main {
+  background-color: var(--light-gray);
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 100%;
+  min-height: 50vh;
+  padding-top: 24px;
+  padding-left: 24px;
+}
+
+.user {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  color: var(--white);
+  display: flex;
+  font-size: 1rem;
+  padding: 0;
+
+  .avatar {
+    margin-left: 6px;
+  }
+}

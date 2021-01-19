@@ -17,6 +17,9 @@ $govuk-assets-path: '/govuk/assets/';
 // Components that aren't in Frontend
 @import "components/cookie-banner";
 
+// Templates that aren't in Frontend
+@import "templates/app";
+
 // Internatl Services specific
 :root {
   --primary: #00a33b;
@@ -92,7 +95,7 @@ $govuk-assets-path: '/govuk/assets/';
 // Defra Components
 @import "components/pagination";
 @import "components/button-as-link";
-
+@import "components/modal";
 
 // Science Search
 @media (min-width: 40.0625em) {

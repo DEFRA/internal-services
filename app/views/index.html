@@ -1,38 +1,20 @@
-{% extends "layout.html" %}
+{% extends "layout_unbranded.html" %}
 
 {% block pageTitle %}
-  Defra Internal Services
-% endblock %
+  Components
+{% endblock %}
 
 {% block content %}
-  <div class="govuk-grid-row flex">
-    <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-xl">
-        {% if serviceName %} {{ serviceName }} {% endif %}
-      </h1>
-      <p>Landing page - more info needed</p>
+  <div class="govuk-grid-row flex mb-3">
+    <div class="govuk-grid-column-one-third">
+      <aside class="app-subnav" role="complementary">
+        {% include "includes/nav_pages.html" %}
+      </aside>
     </div>
 
-    <div class="govuk-grid-column-one-third">
-      <aside class="app-related-items" role="complementary">
-        <h2 class="govuk-heading-m" id="subsection-title">
-          Subsection
-        </h2>
-        <nav role="navigation" aria-labelledby="subsection-title">
-          <ul class="govuk-list govuk-!-font-size-16">
-            <li>
-              <a href="/components">Components</a>
-            </li>
-<!--             <li>
-              <a href="#" class="govuk-!-font-weight-bold">
-                More <span class="govuk-visually-hidden">in Subsection</span>
-              </a>
-            </li> -->
-          </ul>
-        </nav>
-      </aside>
-
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Designing and building Defra internal services</h1>
+      <p>Landing page - info needed</p>
     </div>
   </div>
 {% endblock %}
-
