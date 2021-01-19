@@ -44,7 +44,12 @@ $govuk-canvas-background-colour: $govuk-body-background-colour;
   }
 
   &__content {
+    align-items: center;
+    display: flex;
+    float: none;
+    justify-content: space-between;
     padding-left: 36px;
+    width: 100%;
   }
 
   &__link {
@@ -190,4 +195,18 @@ $govuk-canvas-background-colour: $govuk-body-background-colour;
   min-height: 50vh;
   padding-top: 24px;
   padding-left: 24px;
+}
+
+.user {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  color: var(--white);
+  display: flex;
+  font-size: 1rem;
+  padding: 0;
+
+  .avatar {
+    margin-left: 6px;
+  }
 }
